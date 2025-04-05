@@ -1,0 +1,112 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('models/background.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+}
+
+
+
+header {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+
+model-viewer{
+    max-width: 100%;
+}
+
+section {
+    padding: 50px;
+    background: rgba(0, 0, 0, 0.7);
+    margin: 15px;
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+section:hover {
+    transform: scale(1.004);
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.project img {
+    max-width: 60%;
+    border-radius: 10px;
+}
+
+ .project button {
+    background: #ff9800;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+
+.project button:hover {
+    background: #e68900;
+}
+
+
+
+
+/* ... your existing CSS ... */
+
+.new-video-project-container { /* Styles for the NEW video project template */
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.new-video-project-container h3 {
+    margin-top: 0;
+    color: #fff;
+}
+
+.new-video-project-container p {
+    color: #ddd;
+}
+
+.new-video-project-container .video-player-container { /* Reusing video-player-container styles */
+    margin-top: 15px;
+    border-radius: 10px;
+    overflow: hidden;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.new-video-project-container .video-player-container video { /* Reusing video styles */
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
