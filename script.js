@@ -3,7 +3,7 @@
 //         {
 //             title: "Apache RTR 160 4v 1",
 //             description: "A High Quality 3D Model of Tvs Apache. (Blender)",
-//             link: "apache.html",
+//             link: "models/new01.png",
 //             image: "models/new01.png"
             
 //         },
