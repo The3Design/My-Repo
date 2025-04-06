@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
             {
                 title: "RiverDell Castel", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
                 description: "Fantacy Environment", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/Riverdell Castle (TY Project).mp4", // <---  Link if needed, can be placeholder
+                link: "https://youtu.be/Nutg3dwEW8g", // <---  Link if needed, can be placeholder
                 // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
                 videoSrc: "https://youtu.be/Nutg3dwEW8g", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
                 poster: "models/3.jpg" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
