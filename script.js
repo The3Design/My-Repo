@@ -1,14 +1,42 @@
-document.addEventListener("DOMContentLoaded", function () {
+    document.addEventListener("DOMContentLoaded", function () {
         const projects = [
-            
+
             {
-                title: "RiverDell Castel", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Fantacy Environment.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "https://youtu.be/Nutg3dwEW8g", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "https://youtu.be/Nutg3dwEW8g", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/3.jpg" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
+                title: "Lexus LX 500d",
+                description: "High Poly Lexux LX 500d Model. (Blender)",
+                link: "models/render1.png",
+                image: "models/render1.png" // Keeping image for Apache RTR 160 4v 1 as requested
             },
+
+            {
+                title: "Lexus LX 500d",
+                description: "High Poly Lexux LX 500d Model. (Blender)",
+                link: "models/render2.png",
+                image: "models/render2.png" // Keeping image for Apache RTR 160 4v 1 as requested
+            },
+
+            {
+                title: "Lexus LX 500d",
+                description: "High Poly Lexux LX 500d Model. (Blender)",
+                link: "models/render3.png",
+                image: "models/render3.png" // Keeping image for Apache RTR 160 4v 1 as requested
+            },
+
+            {
+                title: "Lexus LX 500d",
+                description: "High Poly Lexux LX 500d Model. (Blender)",
+                link: "models/LEXUS1.png",
+                image: "models/LEXUS1.png" // Keeping image for Apache RTR 160 4v 1 as requested
+            },
+
+            {
+                title: "Lexus LX 500d",
+                description: "High Poly Lexux LX 500d Model. (Blender)",
+                link: "models/LEXUS2.png",
+                image: "models/LEXUS2.png" // Keeping image for Apache RTR 160 4v 1 as requested
+            },
+            
+            
 
             {
                 title: "Apache RTR 160 4v 1",
@@ -39,14 +67,7 @@ document.addEventListener("DOMContentLoaded", function () {
             },
     
     
-            {
-                title: "Stormey Ocean", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Animated Ocean", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/ocean 4k.mp4", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/ocean 4k.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/ocean.png" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
+            
     
     
             {
@@ -157,16 +178,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 image: "models/animation13.jpg" // Keeping image and adding "models/" prefix
             },
 
-            {
-                title: "3D Shampoo Bottel Advertisement", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Product Animation", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/13.mp4", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/13.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/animation13.jpg" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
-    
-    
+        
             {
                 title: "3D Water Kiosk",
                 description: "3D Water Dispensing Machine. (Blender)",
@@ -219,15 +231,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 image: "models/animation20.jpg" // Keeping image and adding "models/" prefix
             },
 
-            {
-                title: "PORSHE 718 Cayman GT4 RS", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "PORSHE 718 Cayman GT4 RS Animation.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/20.mp4", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/20.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/animation20.jpg" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
-    
     
             {
                 title: "3D Perfume Bottle",
@@ -290,9 +293,9 @@ document.addEventListener("DOMContentLoaded", function () {
             },
 
             {
-                title: "3D Chavaprash Bottel Advertisement", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Product Animation.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/27.mp4", // <---  Link if needed, can be placeholder
+                title: "My New Video Project Title", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
+                description: "Description of my new video project.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
+                link: "new-video-project-page.html", // <---  Link if needed, can be placeholder
                 // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
                 videoSrc: "Videos/27.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
                 poster: "models/animation27.png" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
@@ -314,14 +317,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 image: "models/animation29.jpeg" // Keeping image and adding "models/" prefix
             },
 
-            {
-                title: "A Old Indian House", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Exterior of An Old Indian House. (Blender) Animation", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/29.mp4", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/29.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/animation29.jpeg" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
+            
     
     
             {
@@ -590,4 +586,6 @@ document.addEventListener("DOMContentLoaded", function () {
             projectContainer.appendChild(projectDiv);
         });
     });    
+
+
 
