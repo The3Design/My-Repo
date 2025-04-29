@@ -528,81 +528,27 @@
     // });
         
     const projectContainer = document.getElementById("project-container");
-    
+
     projects.forEach(project => {
         const projectDiv = document.createElement("div");
         projectDiv.classList.add("project");
 
         let projectHTML = "";
 
-
-         if (project.videoSrc && !project.image) { // NEW CONDITION: videoSrc exists AND image is NOT present
-            // NEW VIDEO PROJECT TEMPLATE (triggered by videoSrc and NO image)
-            projectHTML = `
-                <div class="new-video-project-container">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <div class="video-player-container">
-                        <video controls poster="${project.poster || ''}" width="100%" height="auto" style="border-radius: 10px; display: block; max-width: 100%;">
-                            <source src="${project.videoSrc}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                     <a href="${project.link}" target="_blank">
-                        <button>View Project</button>
-                    </a>
-                </div>
-            `;
-        }
-        else if (project.type === "video") { // Keep your video project template as is (if you are still using it)
-            // ... (Your video project template code) ...
-            projectHTML = `
-                <div class="video-project">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <div class="video-player-container">
-                        <video controls poster="${project.poster || ''}" width="480" height="270">
-                            <source src="${project.videoSrc}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                </div>
-            `;
-        } else { // Modified ELSE block for image projects (and now video if videoSrc exists)
-            // Modified Image Project Template to check for videoSrc
-            if (project.videoSrc) {
-                // Display Video Player if videoSrc is present (within image project template)
-                projectHTML = `
-                    <div class="image-project-video-container">
-                        <video controls poster="${project.poster || ''}" width="100%" height="auto" style="border-radius: 10px; display: block; max-width: 100%;">
-                            <source src="${project.videoSrc}" type="video/mp4">
-                            Your browser does not support the video tag.
-                            </video>
-                        <h3>${project.title}</h3>
-                        <p>${project.description}</p>
-                        <a href="${project.link}" target="_blank">
-                            <button>View Project</button>
-                        </a>
-                    </div>
-                `;
-            } else {
-                // Display Image (default image project template - when no videoSrc)
-                projectHTML = `
-                    <img src="${project.image}" alt="${project.title}">
-                    <h3>${project.title}</h3>
-                    <p>${project.description}</p>
-                    <a href="${project.link}" target="_blank">
-                        <button>View Project</button>
-                    </a>
-                `;
-            }
-        }
+        // Image Project Template
+        projectHTML = `
+            <img src="${project.image}" alt="${project.title}">
+            <h3>${project.title}</h3>
+            <p>${project.description}</p>
+            <a href="${project.link}" target="_blank">
+                <button>View Project</button>
+            </a>
+        `;
 
         projectDiv.innerHTML = projectHTML;
         projectContainer.appendChild(projectDiv);
     });
-});    
-
+});
 
 
 
