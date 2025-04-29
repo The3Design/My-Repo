@@ -1,20 +1,47 @@
-
     document.addEventListener("DOMContentLoaded", function () {
         const projects = [
-            
-            
+
             {
-                title: "RiverDell Castel",
-                description: "Fantacy Environment.",
-                link: "models/riverdell-castel-project.html",
-                videoSrc: `<iframe width="560" height="315" src="https://www.youtube.com/embed/Nutg3dwEW8g" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`,
-                poster: "models/3.jpg"
+                title: "Bugatti La Voiture Noire",
+                description: "High Poly Bugatti La Voiture Noire Model. (Blender)",
+                link: "models/render1.png",
+                image: "models/render1.png" // Keeping image for Apache RTR 160 4v 1 as requested
             },
+
+            {
+                title: "Bugatti La Voiture Noire",
+                description: "High Poly Bugatti La Voiture Noire Model. (Blender)",
+                link: "models/render2.png",
+                image: "models/render2.png" // Keeping image for Apache RTR 160 4v 1 as requested
+            },
+
+            {
+                title: "Lexus LX 500d",
+                description: "High Poly Lexux LX 500d Model. (Blender)",
+                link: "models/render3.png",
+                image: "models/render.png" // Keeping image for Apache RTR 160 4v 1 as requested
+            },
+
+            {
+                title: "Lexus LX 500d",
+                description: "High Poly Lexux LX 500d Model. (Blender)",
+                link: "models/LEXUS1.png",
+                image: "models/LEXUS1.png" // Keeping image for Apache RTR 160 4v 1 as requested
+            },
+
+            {
+                title: "Lexus LX 500d",
+                description: "High Poly Lexux LX 500d Model. (Blender)",
+                link: "models/LEXUS2.png",
+                image: "models/LEXUS2.png" // Keeping image for Apache RTR 160 4v 1 as requested
+            },
+            
+            
 
             {
                 title: "Apache RTR 160 4v 1",
                 description: "A High Quality 3D Model of Tvs Apache. (Blender)",
-                link: "apache.html",
+                link: "models/new01.png",
                 image: "models/new01.png" // Keeping image for Apache RTR 160 4v 1 as requested
             },
     
@@ -40,14 +67,7 @@
             },
     
     
-            {
-                title: "Stormey Ocean", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Animated Ocean.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/ocean 4k.mp4", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/ocean 4k.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/ocean.png" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
+            
     
     
             {
@@ -158,16 +178,7 @@
                 image: "models/animation13.jpg" // Keeping image and adding "models/" prefix
             },
 
-            {
-                title: "3D Shampoo Bottel Advertisement", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Product Animation.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/13.mp4", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/13.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/animation13.jpg" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
-    
-    
+        
             {
                 title: "3D Water Kiosk",
                 description: "3D Water Dispensing Machine. (Blender)",
@@ -220,15 +231,6 @@
                 image: "models/animation20.jpg" // Keeping image and adding "models/" prefix
             },
 
-            {
-                title: "PORSHE 718 Cayman GT4 RS", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "PORSHE 718 Cayman GT4 RS Animation.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/20.mp4", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/20.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/animation20.jpg" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
-    
     
             {
                 title: "3D Perfume Bottle",
@@ -290,14 +292,7 @@
                 image: "models/animation27.png" // Keeping image and adding "models/" prefix
             },
 
-            {
-                title: "3D Chavaprash Bottel Advertisement", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Product Animation.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "new-video-project-page.html", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/27.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/animation27.png" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
+            
     
     
             {
@@ -315,14 +310,7 @@
                 image: "models/animation29.jpeg" // Keeping image and adding "models/" prefix
             },
 
-            {
-                title: "A Old Indian House", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                description: "Exterior of An Old Indian House. (Blender) Animation.", // <--- NEW VIDEO PROJECT - VIDEO TEMPLATE
-                link: "Videos/29.mp4", // <---  Link if needed, can be placeholder
-                // image: "models/new4.png",  // REMOVE image property for video project - IMPORTANT
-                videoSrc: "Videos/29.mp4", // <--- ADD videoSrc for new video project - VIDEO TEMPLATE
-                poster: "models/animation29.jpeg" // <--- OPTIONAL poster for new video project - VIDEO TEMPLATE
-            },
+            
     
     
             {
@@ -548,93 +536,3 @@
             projectContainer.appendChild(projectDiv);
         });
     });
-
-
-
-
-
-
-
-    
-    
-    //     const projectContainer = document.getElementById("project-container");
-    
-    //     projects.forEach(project => {
-    //         const projectDiv = document.createElement("div");
-    //         projectDiv.classList.add("project");
-    
-    //         let projectHTML = "";
-    
-    
-    //          if (project.videoSrc && !project.image) { // NEW CONDITION: videoSrc exists AND image is NOT present
-    //             // NEW VIDEO PROJECT TEMPLATE (triggered by videoSrc and NO image)
-    //             projectHTML = `
-    //                 <div class="new-video-project-container">
-    //                     <h3>${project.title}</h3>
-    //                     <p>${project.description}</p>
-    //                     <div class="video-player-container">
-    //                         <video controls poster="${project.poster || ''}" width="100%" height="auto" style="border-radius: 10px; display: block; max-width: 100%;">
-    //                             <source src="${project.videoSrc}" type="video/mp4">
-    //                             Your browser does not support the video tag.
-    //                         </video>
-    //                     </div>
-    //                      <a href="${project.link}" target="_blank">
-    //                         <button>View Project</button>
-    //                     </a>
-    //                 </div>
-    //             `;
-    //         }
-    //         else if (project.type === "video") { // Keep your video project template as is (if you are still using it)
-    //             // ... (Your video project template code) ...
-    //             projectHTML = `
-    //                 <div class="video-project">
-    //                     <h3>${project.title}</h3>
-    //                     <p>${project.description}</p>
-    //                     <div class="video-player-container">
-    //                         <video controls poster="${project.poster || ''}" width="480" height="270">
-    //                             <source src="${project.videoSrc}" type="video/mp4">
-    //                             Your browser does not support the video tag.
-    //                         </video>
-    //                     </div>
-    //                 </div>
-    //             `;
-    //         } else { // Modified ELSE block for image projects (and now video if videoSrc exists)
-    //             // Modified Image Project Template to check for videoSrc
-    //             if (project.videoSrc) {
-    //                 // Display Video Player if videoSrc is present (within image project template)
-    //                 projectHTML = `
-    //                     <div class="image-project-video-container">
-    //                         <video controls poster="${project.poster || ''}" width="100%" height="auto" style="border-radius: 10px; display: block; max-width: 100%;">
-    //                             <source src="${project.videoSrc}" type="video/mp4">
-    //                             Your browser does not support the video tag.
-    //                             </video>
-    //                         <h3>${project.title}</h3>
-    //                         <p>${project.description}</p>
-    //                         <a href="${project.link}" target="_blank">
-    //                             <button>View Project</button>
-    //                         </a>
-    //                     </div>
-    //                 `;
-    //             } else {
-    //                 // Display Image (default image project template - when no videoSrc)
-    //                 projectHTML = `
-    //                     <img src="${project.image}" alt="${project.title}">
-    //                     <h3>${project.title}</h3>
-    //                     <p>${project.description}</p>
-    //                     <a href="${project.link}" target="_blank">
-    //                         <button>View Project</button>
-    //                     </a>
-    //                 `;
-
-                
-    //             }
-    //         }
-    
-    //         projectDiv.innerHTML = projectHTML;
-    //         projectContainer.appendChild(projectDiv);
-    //     });
-    // });    
-
-
-
-   
