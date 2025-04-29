@@ -1,3 +1,4 @@
+
     document.addEventListener("DOMContentLoaded", function () {
         const projects = [
 
@@ -16,10 +17,10 @@
             },
 
             {
-                title: "Lexus LX 500d",
-                description: "High Poly Lexux LX 500d Model. (Blender)",
+                title: "Bugatti La Voiture Noire",
+                description: "High Poly Bugatti La Voiture Noire Model. (Blender)",
                 link: "models/render3.png",
-                image: "models/render.png" // Keeping image for Apache RTR 160 4v 1 as requested
+                image: "models/render3.png" // Keeping image for Apache RTR 160 4v 1 as requested
             },
 
             {
@@ -505,34 +506,130 @@
         ];
 
 
-        projects.forEach(project => {
-            const projectDiv = document.createElement("div");
-            projectDiv.classList.add("project");
+    //     projects.forEach(project => {
+    //         const projectDiv = document.createElement("div");
+    //         projectDiv.classList.add("project");
     
-            let projectHTML = `
-                <div class="project-card">
+    //         let projectHTML = `
+    //             <div class="project-card">
+    //                 <h3>${project.title}</h3>
+    //                 <p>${project.description}</p>`;
+    
+    //         // Add view project button
+    //         projectHTML += `
+    //                 <a href="${project.link}" target="_blank">
+    //                     <button style="margin-top: 10px;">View Project</button>
+    //                 </a>
+    //             </div>`;
+    
+    //         projectDiv.innerHTML = projectHTML;
+    //         projectContainer.appendChild(projectDiv);
+    //     });
+    // });
+        
+    const projectContainer = document.getElementById("project-container");
+    
+    projects.forEach(project => {
+        const projectDiv = document.createElement("div");
+        projectDiv.classList.add("project");
+
+        let projectHTML = "";
+
+
+         if (project.videoSrc && !project.image) { // NEW CONDITION: videoSrc exists AND image is NOT present
+            // NEW VIDEO PROJECT TEMPLATE (triggered by videoSrc and NO image)
+            projectHTML = `
+                <div class="new-video-project-container">
                     <h3>${project.title}</h3>
-                    <p>${project.description}</p>`;
-    
-            // Embed YouTube iframe if videoEmbed is present
-            if (project.videoEmbed) {
-                projectHTML += `
-                    <div class="video-container" style="margin: 15px 0;">
-                        ${project.videoEmbed}
-                    </div>`;
-            } else if (project.poster) {
-                projectHTML += `
-                    <img src="${project.poster}" alt="${project.title}" style="width: 100%; border-radius: 10px;">`;
-            }
-    
-            // Add view project button
-            projectHTML += `
-                    <a href="${project.link}" target="_blank">
-                        <button style="margin-top: 10px;">View Project</button>
+                    <p>${project.description}</p>
+                    <div class="video-player-container">
+                        <video controls poster="${project.poster || ''}" width="100%" height="auto" style="border-radius: 10px; display: block; max-width: 100%;">
+                            <source src="${project.videoSrc}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                     <a href="${project.link}" target="_blank">
+                        <button>View Project</button>
                     </a>
-                </div>`;
-    
-            projectDiv.innerHTML = projectHTML;
-            projectContainer.appendChild(projectDiv);
-        });
+                </div>
+            `;
+        }
+        else if (project.type === "video") { // Keep your video project template as is (if you are still using it)
+            // ... (Your video project template code) ...
+            projectHTML = `
+                <div class="video-project">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <div class="video-player-container">
+                        <video controls poster="${project.poster || ''}" width="480" height="270">
+                            <source src="${project.videoSrc}" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                </div>
+            `;
+        } else { // Modified ELSE block for image projects (and now video if videoSrc exists)
+            // Modified Image Project Template to check for videoSrc
+            if (project.videoSrc) {
+                // Display Video Player if videoSrc is present (within image project template)
+                projectHTML = `
+                    <div class="image-project-video-container">
+                        <video controls poster="${project.poster || ''}" width="100%" height="auto" style="border-radius: 10px; display: block; max-width: 100%;">
+                            <source src="${project.videoSrc}" type="video/mp4">
+                            Your browser does not support the video tag.
+                            </video>
+                        <h3>${project.title}</h3>
+                        <p>${project.description}</p>
+                        <a href="${project.link}" target="_blank">
+                            <button>View Project</button>
+                        </a>
+                    </div>
+                `;
+            } else {
+                // Display Image (default image project template - when no videoSrc)
+                projectHTML = `
+                    <img src="${project.image}" alt="${project.title}">
+                    <h3>${project.title}</h3>
+                    <p>${project.description}</p>
+                    <a href="${project.link}" target="_blank">
+                        <button>View Project</button>
+                    </a>
+                `;
+            }
+        }
+
+        projectDiv.innerHTML = projectHTML;
+        projectContainer.appendChild(projectDiv);
     });
+});    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        // const container = document.getElementById("project-container");
+
+        // projects.forEach(project => {
+        // const div = document.createElement("div");
+        // div.className = "project";
+
+        //     div.innerHTML = `
+        //     <h3>${project.title}</h3>
+        //     <p>${project.description}</p>
+        //     <img src="${project.image}" alt="${project.title}" />
+        // `;
+
+        // container.appendChild(div);
+        // });
